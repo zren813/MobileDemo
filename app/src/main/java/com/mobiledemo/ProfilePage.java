@@ -129,12 +129,12 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
                 if (targetEmail[0] == null) {
                     searchedUserInfo.setText("No such user");
                 } else {
-                    searchedUserInfo.setText(targetName);
-                    searchedEmail.setText(targetEmail[0]);
+                    searchedUserInfo.setText("Nick Name: " + targetName);
+                    searchedEmail.setText("Email:  " + targetEmail[0]);
                     if (targetMoment[0] == null) {
                         searchedMoment.setText("No moment currently");
                     } else {
-                        searchedMoment.setText(targetMoment[0]);
+                        searchedMoment.setText("Moment: " + targetMoment[0]);
                     }
                 }
             }
