@@ -1,7 +1,7 @@
 package com.mobiledemo;
 
 public class User {
-    public String nickName, email;
+    public String nickName, email, moment;
 
     public User() {
 
@@ -10,5 +10,6 @@ public class User {
         this.nickName = nickName;
         this.email = email;
     }
+
 
 }
