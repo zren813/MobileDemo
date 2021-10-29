@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "534639147980",
+    "firebase_url": "https://mobiledemo-d52aa-default-rtdb.firebaseio.com",
+    "project_id": "mobiledemo-d52aa",
+    "storage_bucket": "mobiledemo-d52aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534639147980:android:f13070312190a8a012fb69",
+        "android_client_info": {
+          "package_name": "com.mobiledemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534639147980-9tan5d1e50j8jcepqq3psoasjqi4hpbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxEe9xrCYgsbXQEVPBH4mNUz1Ixg0C1N4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534639147980-9tan5d1e50j8jcepqq3psoasjqi4hpbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
