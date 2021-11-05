@@ -93,7 +93,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        startActivity(new Intent(RegisterUser.this, ProfilePage.class));
+                                        startActivity(new Intent(RegisterUser.this, SearchClassPage.class));
                                     } else {
                                         Toast.makeText(RegisterUser.this, "Registered failed",Toast.LENGTH_LONG).show();
                                     }

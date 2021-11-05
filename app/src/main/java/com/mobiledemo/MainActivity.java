@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(MainActivity.this, ProfilePage.class));
+                    startActivity(new Intent(MainActivity.this, SearchClassPage.class));
                 } else {
                    Toast.makeText(MainActivity.this, "Please recheck your email or password", Toast.LENGTH_LONG).show();
                 }

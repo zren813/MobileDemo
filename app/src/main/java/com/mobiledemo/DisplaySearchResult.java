@@ -13,4 +13,5 @@ public class DisplaySearchResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_search_result);
     }
+
 }
