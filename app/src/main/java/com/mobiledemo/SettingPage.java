@@ -32,4 +32,9 @@ public class SettingPage extends AppCompatActivity {
         Intent courseList = new Intent(SettingPage.this, CourseListPage.class);
         startActivity(courseList);
     }
+
+    public void onSmallSettingButton(View view) {
+        Intent smallSetting = new Intent(SettingPage.this, DetailedSettingPage.class);
+        startActivity(smallSetting);
+    }
 }
