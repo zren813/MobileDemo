@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileDemo">
+        <activity android:name=".CourseListPage"></activity>
+        <activity android:name=".SettingPage" />
+        <activity android:name=".InfoPage" />
+        <activity android:name=".SearchClassPage" />
         <activity
             android:name=".DisplaySearchResult"
             android:exported="true" />

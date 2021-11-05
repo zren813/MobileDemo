@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/infoButton"
+            android:background="#00FFFFFF"
+            android:onClick="onSearchButton"
+            app:srcCompat="@drawable/search_icon" />
+
+        <ImageButton
+            android:id="@+id/infoButton"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/courseListButton"
+            android:background="#FFFFFF"
+            android:onClick="onInfoButton"
+            app:srcCompat="@drawable/people_icon" />
+
+        <ImageButton
+            android:id="@+id/courseListButton"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/settingButton"
+            android:background="#00FFFFFF"
+            android:onClick="onCourseListButton"
+            app:srcCompat="@drawable/course_list_icon" />
+
+        <ImageButton
+            android:id="@+id/settingButton"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="#00FFFFFF"
+            android:onClick="onSettingButton"
+            app:srcCompat="@drawable/setting_icon" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
