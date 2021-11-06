@@ -1,13 +1,12 @@
 package com.mobiledemo;
 
 public class User {
-    public String nickName, email, moment;
+    public String nickName, email, moment, firstName, lastName, major;
 
     public User() {
 
     }
-    public User(String nickName, String email) {
-        this.nickName = nickName;
+    public User(String email) {
         this.email = email;
     }
 
