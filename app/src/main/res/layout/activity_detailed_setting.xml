@@ -35,7 +35,7 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="69dp"
-        android:background="@color/purple_500"
+        android:background="#4D6200EE"
         android:text="Detailed Setting"
         android:textAlignment="center"
         android:textColor="#FFFFFF"

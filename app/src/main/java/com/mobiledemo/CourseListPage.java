@@ -70,7 +70,7 @@ public class CourseListPage extends AppCompatActivity {
 
 
     public void getAdapter() {
-        System.out.println(courseNo);
+        System.out.println(courseName);
         CourseListAdapter courseListAdapter = new CourseListAdapter(this, courseNo, courseName);
         recyclerView.setAdapter(courseListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -94,5 +94,10 @@ public class CourseListPage extends AppCompatActivity {
     public void onCourseListButton(View view) {
         Intent courseList = new Intent(CourseListPage.this, CourseListPage.class);
         startActivity(courseList);
+    }
+
+    public void changeToGrid(View view) {
+        Intent courseListGrid = new Intent(CourseListPage.this, CourseGridPage.class);
+        startActivity(courseListGrid);
     }
 }
