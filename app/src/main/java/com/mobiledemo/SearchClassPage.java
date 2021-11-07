@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListPopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
@@ -72,7 +73,7 @@ public class SearchClassPage extends AppCompatActivity implements View.OnClickLi
 
         String targetName = edit_search_course.getText().toString();
         //final TextView course_result = (TextView) findViewById(R.id.course_result);
-        listCourse_btn.setText(targetName);
+        listCourse_btn.setText(targetName + "    Database Technology");
         //System.out.println(course_result.getText());
         /*
         DatabaseReference reference;
@@ -123,6 +124,9 @@ public class SearchClassPage extends AppCompatActivity implements View.OnClickLi
     public void onCourseListButton(View view) {
         Intent courseList = new Intent(SearchClassPage.this, CourseListPage.class);
         startActivity(courseList);
+    }
+    public void onAddClass(View view) {
+        Toast.makeText(SearchClassPage.this, "Class Added", Toast.LENGTH_LONG).show();
     }
 
 

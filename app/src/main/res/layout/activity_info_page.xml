@@ -34,7 +34,7 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="69dp"
-        android:background="#4D6200EE"
+        android:background="#B30078D4"
         android:text="Personal Info"
         android:textAlignment="center"
         android:textColor="#FFFFFF"

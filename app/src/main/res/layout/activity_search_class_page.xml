@@ -11,7 +11,7 @@
         android:id="@+id/background_search"
         android:layout_width="420dp"
         android:layout_height="150dp"
-        android:background="#0078D4"
+        android:background="#B30078D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -91,16 +91,26 @@
 
     <Button
         android:id="@+id/listCourse_btn"
-        android:layout_width="382dp"
-        android:layout_height="84dp"
-        app:backgroundTint="#CACACA"
+        android:layout_width="307dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
         android:textColor="@color/black"
+        app:backgroundTint="#CACACA"
         app:layout_constraintBottom_toTopOf="@+id/include"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background_search"
         app:layout_constraintVertical_bias="0.04" />
 
+    <ImageView
+        android:id="@+id/addClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="34dp"
+        android:onClick="onAddClass"
+        app:layout_constraintStart_toEndOf="@+id/listCourse_btn"
+        app:layout_constraintTop_toBottomOf="@+id/background_search"
+        app:srcCompat="@android:drawable/btn_plus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
