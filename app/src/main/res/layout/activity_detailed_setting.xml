@@ -8,26 +8,28 @@
 
     <TextView
         android:id="@+id/fontButton"
-        android:layout_width="201dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="116dp"
+        android:layout_width="224dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="200dp"
-        android:background="@color/teal_200"
+        android:background="#4D6200EE"
         android:onClick="onFontButton"
         android:text="Font"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/themeButton"
-        android:layout_width="201dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="116dp"
-        android:background="@color/teal_200"
+        android:layout_width="224dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="92dp"
+        android:background="#4D6200EE"
         android:onClick="onThemeButton"
         android:text="Theme"
         android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fontButton" />
 
