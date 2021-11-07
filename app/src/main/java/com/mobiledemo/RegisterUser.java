@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     private TextView login, registerUser;
-    private EditText editTextNickName, editTextEmail, editTextPassword;
+    private EditText editTextEmail, editTextPassword;
     private FirebaseAuth mAuth;
 
 
@@ -37,7 +37,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         registerUser.setOnClickListener(this);
 
         editTextEmail = (EditText) findViewById(R.id.editRegisterEmail);
-        editTextNickName = (EditText) findViewById(R.id.editNickName);
         editTextPassword = (EditText) findViewById(R.id.editRegisterPassword);
 
 
@@ -57,13 +56,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-        String nickName = editTextNickName.getText().toString().trim();
 
-        if (nickName.isEmpty()) {
-            editTextNickName.setError("Nick name is required");
-            editTextNickName.requestFocus();
-            return;
-        }
 
         if (email.isEmpty()) {
             editTextEmail.setError("Email address is required");
@@ -86,7 +79,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            User user = new User(nickName, email);
+                            User user = new User(email);
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
