@@ -1,8 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
-import json
-import base64
-import urllib
 import time
 start_time = time.time()
 headers={
@@ -29,33 +25,33 @@ headers={
 }
 
 submit = {
-    "term_in": "202202".encode("utf-8"),
-    "sel_subj": "dummy".encode("utf-8"),
-    "sel_day": "dummy".encode("utf-8"),
-    "sel_schd": "dummy".encode("utf-8"),
-    "sel_insm": "dummy".encode("utf-8"),
-    "sel_camp": "dummy".encode("utf-8"),
-    "sel_levl": "dummy".encode("utf-8"),
-    "sel_sess": "dummy".encode("utf-8"),
-    "sel_instr": "dummy".encode("utf-8"),
-    "sel_ptrm": "dummy".encode("utf-8"),
-    "sel_attr": "dummy".encode("utf-8"),
-    "sel_subj": "CS".encode("utf-8"),
-    "sel_crse": "".encode("utf-8"),
-    "sel_title": "".encode("utf-8"),
-    "sel_schd":"%".encode("utf-8"),
-    "sel_from_cred":"".encode("utf-8"),
-    "sel_to_cred":"".encode("utf-8"),
-    "sel_camp": "%".encode("utf-8"),
-    "sel_ptrm": "%".encode("utf-8"),
-    "sel_instr": "%".encode("utf-8"),
-    "sel_attr": "%".encode("utf-8"),
-    "begin_hh": "0".encode("utf-8"),
-    "begin_mi": "0".encode("utf-8"),
-    "begin_ap": "a".encode("utf-8"),
-    "end_hh": "0".encode("utf-8"),
-    "end_mi": "0".encode("utf-8"),
-    "end_ap": "a".encode("utf-8"),
+    "term_in": "202202",
+    "sel_subj": "dummy",
+    "sel_day": "dummy",
+    "sel_schd": "dummy",
+    "sel_insm": "dummy",
+    "sel_camp": "dummy",
+    "sel_levl": "dummy",
+    "sel_sess": "dummy",
+    "sel_instr": "dummy",
+    "sel_ptrm": "dummy",
+    "sel_attr": "dummy",
+    "sel_subj": "CS",
+    "sel_crse": "",
+    "sel_title": "",
+    "sel_schd":"%",
+    "sel_from_cred":"",
+    "sel_to_cred":"",
+    "sel_camp": "%",
+    "sel_ptrm": "%",
+    "sel_instr": "%",
+    "sel_attr": "%",
+    "begin_hh": "0",
+    "begin_mi": "0",
+    "begin_ap": "a",
+    "end_hh": "0",
+    "end_mi": "0",
+    "end_ap": "a",
 
 
 }
