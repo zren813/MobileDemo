@@ -15,11 +15,16 @@ import java.util.Map;
 public class CourseListAdapter extends RecyclerView.Adapter<CourseListAdapter.MyViewHolder>{
     List<String> courseNo;
     List<String> courseName;
+    List<String> professorName;
+    List<String> regNo;
     Context context;
-    public CourseListAdapter(Context ct, List<String> courseNo, List<String> courseName) {
+    private ItemClickListener listener;
+    public CourseListAdapter(Context ct, List<String> courseNo, List<String> courseName, List<String> professorName, List<String> regNo) {
         context = ct;
         this.courseNo = courseNo;
         this.courseName = courseName;
+        this.professorName = professorName;
+        this.regNo = regNo;
     }
     @NonNull
     @Override
@@ -30,9 +35,10 @@ public class CourseListAdapter extends RecyclerView.Adapter<CourseListAdapter.My
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CourseListAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.courseNoView.setText(courseNo.get(position));
         holder.courseNameView.setText(courseName.get(position));
+        holder.professorNameView.setText(professorName.get(position));
     }
 
     @Override
@@ -40,13 +46,25 @@ public class CourseListAdapter extends RecyclerView.Adapter<CourseListAdapter.My
         return courseNo.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView courseNoView;
         TextView courseNameView;
+        TextView professorNameView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             courseNoView = itemView.findViewById(R.id.courseNoView);
             courseNameView = itemView.findViewById(R.id.courseNameTextView);
+            professorNameView = itemView.findViewById(R.id.professorView);
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            listener.onItemClick(v, getAdapterPosition());
+        }
+    }
+    void setClickListener(ItemClickListener listener) {
+        this.listener = listener;
     }
 }
