@@ -23,7 +23,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.Iterator;
 import java.util.Map;
 
 public class CourseDetailPage extends AppCompatActivity implements View.OnClickListener{
@@ -34,9 +33,10 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
     private String uid;
     private FirebaseFirestore db;
     String regNo;
-    private Button add_remove_button;
+    private Button add_remove_button, professorButton;
     Map<String, String> courses;
     boolean appeared = false;
+    String professor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -63,6 +63,7 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
         campusView = findViewById(R.id.courseDetailCampusView);
         daysView = findViewById(R.id.courseDetailDaysView);
         add_remove_button = findViewById(R.id.add_remove_class_button);
+        professorButton = findViewById(R.id.professorPageButton);
 
         DocumentReference this_doc_Ref = db.collection("Spring-2022").document(regNo);
         this_doc_Ref.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -81,6 +82,7 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
                     levelsView.setText((String)this_doc.getData().get("Levels"));
                     campusView.setText((String)this_doc.getData().get("campus"));
                     daysView.setText((String)this_doc.getData().get("days"));
+                    professor = (String) this_doc.getData().get("professor");
                 }
             }
         });
@@ -107,6 +109,7 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
             }
         });
         add_remove_button.setOnClickListener(this);
+        professorButton.setOnClickListener(this);
 
     }
 
@@ -135,6 +138,10 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
         switch(v.getId()) {
             case R.id.add_remove_class_button:
                 add_remove_class();
+                break;
+            case R.id.professorPageButton:
+                professorPage();
+                break;
         }
     }
 
@@ -147,5 +154,11 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
             courses.put(regNo,regNo);
             reference.child(uid).child("courses").setValue(courses);
         }
+    }
+    public void professorPage() {
+        Intent professorPage = new Intent(CourseDetailPage.this, ProfessorPage.class);
+        professorPage.putExtra("regNo", regNo);
+        professorPage.putExtra("professor", professor);
+        startActivity(professorPage);
     }
 }
