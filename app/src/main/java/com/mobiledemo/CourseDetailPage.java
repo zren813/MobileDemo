@@ -138,8 +138,10 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
         switch(v.getId()) {
             case R.id.add_remove_class_button:
                 add_remove_class();
+                break;
             case R.id.professorPageButton:
                 professorPage();
+                break;
         }
     }
 
