@@ -2,48 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridOverallLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CourseGridPage">
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="83dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="132dp"
-        android:background="#4D00BCD4"
-        android:text="CS6400 Database Technology"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="83dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="132dp"
-        android:background="#4D00BCD4"
-        android:text="CS6400 Database Technology"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="83dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="232dp"
-        android:background="#4DFFC107"
-        android:text="CS8803 Mobile Development"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView17"
@@ -113,15 +75,47 @@
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <TextView
-        android:id="@+id/textView19"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mLayout"
         android:layout_width="83dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="232dp"
-        android:background="#4DFF9800"
-        android:text="CS8803 Mobile Development"
-        android:textAlignment="center"
-        android:textStyle="bold"
+        android:layout_height="633dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tuLayout"
+        android:layout_width="83dp"
+        android:layout_height="633dp"
+        app:layout_constraintStart_toEndOf="@+id/mLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wLayout"
+        android:layout_width="83dp"
+        android:layout_height="633dp"
+        app:layout_constraintStart_toEndOf="@+id/tuLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/thLayout"
+        android:layout_width="83dp"
+        android:layout_height="633dp"
+        app:layout_constraintStart_toEndOf="@+id/wLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fLayout"
+        android:layout_width="83dp"
+        android:layout_height="633dp"
+        app:layout_constraintStart_toEndOf="@+id/thLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
