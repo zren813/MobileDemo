@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class CourseDetailPage extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView courseNoView, courseTitleView, professorView, regNoView, associatedTermView, dateRangeView, gradeBasisView, levelsView, campusView, daysView;
+    private TextView courseNoView, courseTitleView, professorView, regNoView, locationView, timeView, gradeBasisView, levelsView, campusView, daysView;
     private FirebaseUser user;
     private DatabaseReference reference;
     private String uid;
@@ -56,8 +56,8 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
         courseTitleView = findViewById(R.id.courseDetailCourseTitleView);
         professorView = findViewById(R.id.courseDetailProfessorView);
         regNoView = findViewById(R.id.courseDetailRegNoView);
-        associatedTermView = findViewById(R.id.courseDetailAssociatedTermView);
-        dateRangeView = findViewById(R.id.courseDetailDateRangeView);
+        locationView = findViewById(R.id.courseDetailLocationView);
+        timeView = findViewById(R.id.courseDetailTimeView);
         gradeBasisView = findViewById(R.id.courseDetailGradeBasisView);
         levelsView = findViewById(R.id.courseDetailLevelsView);
         campusView = findViewById(R.id.courseDetailCampusView);
@@ -76,8 +76,8 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
                     courseTitleView.setText((String)this_doc.getData().get("name"));
                     professorView.setText((String)this_doc.getData().get("professor"));
                     regNoView.setText((String)this_doc.getData().get("regnumber"));
-                    associatedTermView.setText((String)this_doc.getData().get("Associated Term"));
-                    dateRangeView.setText((String)this_doc.getData().get("Date Range"));
+                    locationView.setText((String)this_doc.getData().get("where"));
+                    timeView.setText((String)this_doc.getData().get("time"));
                     gradeBasisView.setText((String)this_doc.getData().get("Grade Basis"));
                     levelsView.setText((String)this_doc.getData().get("Levels"));
                     campusView.setText((String)this_doc.getData().get("campus"));
