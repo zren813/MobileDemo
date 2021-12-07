@@ -14,7 +14,7 @@ r = requests.get('https://www.ratemyprofessors.com/search/teachers?query=*&sid=3
 
 soup = BeautifulSoup(r.text, 'lxml')
 
-info_list = soup.find_all(attrs={'class': 'SearchResultsPage__StyledSearchResultsPage-sc-1srop1v-0 kdXwyM'})
+info_list = soup.find_all(attrs={'class': 'SearchResultsPage__StyledSearchResultsPage -sc-1srop1v-0 kdXwyM'})
 tit_quality = info_list[0].find_all(attrs={'class':'CardNumRating__CardNumRatingNumber-sc-17t4b9u-2'})
 tit_rate = info_list[0].find_all(attrs={'class': 'CardFeedback__CardFeedbackNumber-lq6nix-2 hroXqf'})
 tit_name=info_list[0].find_all(attrs={'class': 'CardName__StyledCardName-sc-1gyrgim-0 cJdVEK'})

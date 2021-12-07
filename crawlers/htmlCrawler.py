@@ -23,6 +23,8 @@ for i in range(len(classtitle)):
 
 count = 0
 sizes = []
+
+numberlist = []
 for i in range(len(classinfo)):
     infolist = classinfo[i].text.split('\n')
 
@@ -66,6 +68,9 @@ for i in range(len(classinfo)):
             dict["name"] = coursename
             dict["regnumber"] = classtitleresult[count][-3]
             dict["number"] = classtitleresult[count][-2]
+            numb = classtitleresult[count][-2]
+            if (numb not in numberlist):
+                numberlist.append(numb)
             dict["time"] = infolist[-6]
             dict["days"] = infolist[-5]
             dict["where"] = infolist[-4]
@@ -76,14 +81,14 @@ for i in range(len(classinfo)):
             dict["credit"] = credit
             dict["otherinfo"] = otherinfo
 
-
-
-
             result.append(dict)
         else:
             dict["name"] = coursename
             dict["regnumber"] = classtitleresult[count][-3]
             dict["number"] = classtitleresult[count][-2]
+            numb = classtitleresult[count][-2]
+            if (numb not in numberlist):
+                numberlist.append(numb)
             dict["time"] = ""
             dict["days"] = ""
             dict["where"] = ""
@@ -104,5 +109,13 @@ jsonString = json.dumps(result)
 jsonFile = open("CScourse.json", "w")
 jsonFile.write(jsonString)
 jsonFile.close()
+print(numberlist)
+
+
+numbersTXT = open("CSnumbers.txt", "w")
+numbersTXT.write(json.dumps(numberlist))
+numbersTXT.close()
+
+
 
 
