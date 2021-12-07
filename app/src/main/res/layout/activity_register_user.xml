@@ -24,6 +24,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:backgroundTint="#F0F0F0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,7 @@
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="Password"
+        android:backgroundTint="#F0F0F0"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -52,6 +54,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="150dp"
         android:text="Register"
+        app:backgroundTint="#a6a084"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editRegisterPassword" />
@@ -67,6 +70,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#5c5a5b"
+
         app:layout_constraintTop_toBottomOf="@+id/editRegisterButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

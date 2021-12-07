@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,15 +7,16 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/searchButton"
-            android:layout_width="102dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="0dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="45dp"
             android:layout_toStartOf="@+id/infoButton"
             android:background="#00FFFFFF"
             android:onClick="onSearchButton"
@@ -24,9 +24,10 @@
 
         <ImageButton
             android:id="@+id/infoButton"
-            android:layout_width="102dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="0dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="45dp"
             android:layout_toStartOf="@+id/courseListButton"
             android:background="#FFFFFF"
             android:onClick="onInfoButton"
@@ -34,9 +35,11 @@
 
         <ImageButton
             android:id="@+id/courseListButton"
-            android:layout_width="102dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="0dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="45dp"
             android:layout_toStartOf="@+id/settingButton"
             android:background="#00FFFFFF"
             android:onClick="onCourseListButton"
@@ -44,13 +47,23 @@
 
         <ImageButton
             android:id="@+id/settingButton"
-            android:layout_width="102dp"
-            android:layout_height="match_parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="55dp"
             android:background="#00FFFFFF"
             android:onClick="onSettingButton"
             app:srcCompat="@drawable/setting_icon" />
 
     </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

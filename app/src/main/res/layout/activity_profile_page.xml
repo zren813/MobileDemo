@@ -79,6 +79,7 @@
         android:layout_marginEnd="56dp"
         android:text="Update Moment"
         android:textSize="12sp"
+        app:backgroundTint="#a6a084"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMoment" />
 
@@ -101,6 +102,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="73dp"
         android:text="Search User"
+        app:backgroundTint="#a6a084"
         app:layout_constraintStart_toEndOf="@+id/textEditSearchUser"
         app:layout_constraintTop_toBottomOf="@+id/editMomentButton" />
 

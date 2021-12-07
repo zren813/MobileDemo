@@ -33,10 +33,11 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:background="#B30078D4"
+        android:layout_height="90dp"
+        android:background="#b5b5b5"
         android:text="Personal Info"
-        android:textAlignment="center"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +126,7 @@
         android:layout_marginStart="156dp"
         android:layout_marginBottom="120dp"
         android:text="Update"
+        app:backgroundTint="#a6a084"
         app:layout_constraintBottom_toTopOf="@+id/include"
         app:layout_constraintStart_toStartOf="parent" />
 

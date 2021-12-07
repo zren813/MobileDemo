@@ -15,15 +15,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <ImageView
         android:id="@+id/background_search"
         android:layout_width="420dp"
         android:layout_height="150dp"
-        android:background="#B30078D4"
+        android:background="#b5b5b5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/edit_search_course"
@@ -48,6 +49,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginBottom="12dp"
         android:text="Search"
+        app:backgroundTint="#5c5a5b"
         app:layout_constraintBottom_toBottomOf="@+id/background_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
@@ -80,6 +82,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="32dp"
         android:text="Confirm"
+        app:backgroundTint="#5c5a5b"
         app:layout_constraintStart_toEndOf="@+id/seasonSpinner"
         app:layout_constraintTop_toTopOf="parent" />
 
