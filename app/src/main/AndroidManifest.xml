@@ -19,10 +19,6 @@
         <activity android:name=".SettingPage" />
         <activity android:name=".InfoPage" />
         <activity android:name=".SearchClassPage" />
-        <activity
-            android:name=".DisplaySearchResult"
-            android:exported="true" />
-        <activity android:name=".ProfilePage" />
         <activity android:name=".RegisterUser" />
         <activity android:name=".MainActivity">
             <intent-filter>
