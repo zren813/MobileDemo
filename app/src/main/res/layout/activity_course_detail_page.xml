@@ -204,7 +204,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="232dp"
-        android:text="Date Range:"
         android:textColor="#5c5a5b"
         android:text="Time:"
         app:layout_constraintStart_toStartOf="parent"

@@ -93,7 +93,10 @@ public class CourseDetailPage extends AppCompatActivity implements View.OnClickL
                 User userProfile = snapshot.getValue(User.class);
                 if (userProfile != null) {
                     courses = userProfile.courses;
-                    if (courses.containsKey(regNo)) {
+                    if (courses == null) {
+                        appeared = false;
+                        add_remove_button.setText("Add Class");
+                    } else if (courses.containsKey(regNo)) {
                         appeared = true;
                         add_remove_button.setText("Remove Class");
                     } else {

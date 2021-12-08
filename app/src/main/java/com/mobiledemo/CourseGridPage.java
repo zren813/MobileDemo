@@ -64,6 +64,9 @@ public class CourseGridPage extends AppCompatActivity {
                 User userProfile = snapshot.getValue(User.class);
                 if (userProfile != null) {
                     courses = userProfile.courses;
+                    if (courses == null) {
+                        return;
+                    }
                     Iterator coursesIterator = courses.entrySet().iterator();
 
                     while (coursesIterator.hasNext()) {
@@ -102,10 +105,12 @@ public class CourseGridPage extends AppCompatActivity {
     }
 
     public void addCourse(String courseNo, String courseName, String days, String time) {
+
+
         if (days.equals("") || days.equals(" ") || time.equals("TBA")) {
             return;
         }
-//45
+
         String[] separated_days = time.split(" ");
         String firstTime = separated_days[0];
         String secondTime = separated_days[3];
@@ -114,10 +119,15 @@ public class CourseGridPage extends AppCompatActivity {
         int secondTimeHour = Integer.valueOf(secondTime.split(":")[0]);
         int secondTimeMin = Integer.valueOf(secondTime.split(":")[1]);
         if (separated_days[1].equals("pm")) {
-            firstTimeHour = firstTimeHour + 12;
+            if (firstTimeHour != 12) {
+                firstTimeHour = firstTimeHour + 12;
+            }
         }
         if (separated_days[4].equals("pm")) {
-            secondTimeHour = secondTimeHour + 12;
+            if (secondTimeHour != 12) {
+                secondTimeHour = secondTimeHour + 12;
+            }
+
         }
 
         int startOffSet = firstTimeHour * 60 + firstTimeMin - 480;
